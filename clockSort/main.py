@@ -8,7 +8,7 @@ from clockSortDir.functions.installSetup import installSetup
 import time
 import random
 
-NUM_OF_NUMS = 100000
+NUM_OF_NUMS = 80000
 
 
 def main():
@@ -22,10 +22,13 @@ def main():
     else:
         array = []
         for x in range(NUM_OF_NUMS):
-            array.append(random.randrange(1, 255))
+            # array.append(random.randrange(1, 255))
+            # array.append(x)
+            array.append(NUM_OF_NUMS - x)
         start = time.time()
         clockSort.clockSort(array)
         return time.time() - start
+
 
 def averageTime():
     COUNTIES = 10
